@@ -26,7 +26,7 @@ const BeforeLogin = ()=>{
     }
     else{
       axios
-      .post(`http://localhost:1000/api/check?token=${TokenLocal}`)
+      .post(`https://todo-na-backend.herokuapp.com/api/check?token=${TokenLocal}`)
       .then((res)=>{
          if(res.data==true)
          {

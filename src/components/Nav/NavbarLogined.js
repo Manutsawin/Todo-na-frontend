@@ -7,7 +7,7 @@ const NavbarLogin = ()=>{
     const TokenLocal = localStorage.getItem("token")
     function  getName(){
         axios
-            .get(`http://localhost:1000/api/user?token=${TokenLocal}`)
+            .get(`https://todo-na-backend.herokuapp.com/api/user?token=${TokenLocal}`)
             .then((res)=>{
                 setname(res.data.Name)
             })

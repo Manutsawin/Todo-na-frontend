@@ -32,7 +32,7 @@ const Todo = ()=>{
 
     function  fetchTodoTask(){
         axios
-            .get(`http://localhost:1000/api/task?token=${TokenLocal}&isFinished=false`)
+            .get(`https://todo-na-backend.herokuapp.com/api/task?token=${TokenLocal}&isFinished=false`)
             .then((res)=>{
                 if(res.data=="")
                 {
@@ -45,7 +45,7 @@ const Todo = ()=>{
 
 
     function  onUpdate(id,isFinished){
-        axios.put(`http://localhost:1000/api/task?token=${TokenLocal}&id=${id}`,{
+        axios.put(`https://todo-na-backend.herokuapp.com/api/task?token=${TokenLocal}&id=${id}`,{
             isFinished : isFinished,
         }).then(()=>{
             fetchTodoTask(); 
@@ -53,7 +53,7 @@ const Todo = ()=>{
     }
 
     function  onUpdateData(id,Name,Time){
-        axios.put(`http://localhost:1000/api/task?token=${TokenLocal}&id=${id}`,{
+        axios.put(`https://todo-na-backend.herokuapp.com/api/task?token=${TokenLocal}&id=${id}`,{
             taskName : Name,
             time : Time
         }).then(()=>{
@@ -63,7 +63,7 @@ const Todo = ()=>{
     }
 
     function onDelete(id){
-        axios.delete(`http://localhost:1000/api/task?token=${TokenLocal}&id=${id}`)
+        axios.delete(`https://todo-na-backend.herokuapp.com/api/task?token=${TokenLocal}&id=${id}`)
         .then(()=>{
             fetchTodoTask(); 
         });
