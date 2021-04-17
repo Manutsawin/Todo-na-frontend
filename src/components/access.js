@@ -50,7 +50,7 @@ const Access = ()=>{
 
     return<div>
       {
-        isAdminLocal ? 
+        isAdmin ? 
         (
           <div>
             <NavbarAdmin/>
