@@ -20,7 +20,7 @@ const NavbarAdmin = ()=>{
         <div>
         <Navbar bg="light" variant="light" expand="lg">
                 <img href="/" src="logo/512.png" height="45" width="45"  className="mr-sm-2"></img>
-                <Navbar.Brand href="/todo" style={{fontFamily:"Nunito"}} className="mr-sm-3"  >Todo na</Navbar.Brand>
+                <Navbar.Brand href="/todo" style={{fontFamily:"Nunito"}} className="mr-sm-3"  >Todo na  [Admin] </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
