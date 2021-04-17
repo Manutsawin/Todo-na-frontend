@@ -56,7 +56,7 @@ const AllTaskDone = ()=>{
             isFinished : isFinished,
         }).then(()=>{
             
-            fetchDoneTask();
+            fetchTask();
         })
     }
 
@@ -66,7 +66,7 @@ const AllTaskDone = ()=>{
             time : Time
         }).then(()=>{
             
-            fetchDoneTask();
+            fetchTask();
         })
     }
 
@@ -74,7 +74,7 @@ const AllTaskDone = ()=>{
     function onDelete(id){
         axios.delete(`https://todo-na-backend.herokuapp.com/api/task?token=${TokenLocal}&id=${id}`)
         .then(()=>{ 
-            fetchDoneTask();
+            fetchTask();
         });
     }
 
