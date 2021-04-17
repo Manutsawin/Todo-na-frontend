@@ -53,7 +53,7 @@ const Access = ()=>{
 
     return<div>
       {
-        isAdminLocal ? 
+        localStorage.getItem("isAdmin") ? 
         (
           <div>
             <NavbarAdmin/>
