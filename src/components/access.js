@@ -3,7 +3,6 @@ import Login from  "./Login"
 import { BrowserRouter as Router, Route,Switch} from "react-router-dom";
 import {  useState } from 'react';
 import axios from 'axios'
-import Access from "./access"
 import Contact from "./pages/ContactPage"
 import SignIn from "./signIn"
 import Navbar from "./Nav/Navbar"
@@ -12,7 +11,7 @@ import Navbar from "./Nav/Navbar"
 
 const Access = ()=>{
 
-  const [isAdmin,setisAdmin]= React.useState(false);
+  const [isAdmin,setisAdmin]= useState(false);
 
   const TokenLocal = localStorage.getItem("token")
 
