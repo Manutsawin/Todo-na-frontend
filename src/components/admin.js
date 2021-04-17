@@ -9,13 +9,26 @@ const Admin = ()=>{
         fetchTask(); 
     }, []);
 
-    function  fetchTask(){
-        console.log("111")
+    function fetchTask(){
+        getTaskFalse();
+        getTaskTrue();
+    }
+    
+    function  getTaskFalse(){
         axios
             .get(`https://todo-na-backend.herokuapp.com/api/TaskAdmin?token=${TokenLocal}&isFinished=false`)
             .then((res)=>{
                 
-                console.log("5555")
+                console.log(res.data)
+                
+            });
+    }
+
+    function  getTaskTrue(){
+        axios
+            .get(`https://todo-na-backend.herokuapp.com/api/TaskAdmin?token=${TokenLocal}&isFinished=true`)
+            .then((res)=>{
+                
                 console.log(res.data)
                 
             });
