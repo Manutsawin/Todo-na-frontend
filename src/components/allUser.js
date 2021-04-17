@@ -64,7 +64,7 @@ const AllUser = ()=>{
     }
 
     function onDelete(id){
-        axios.delete(`https://todo-na-backend.herokuapp.com/api/task?token=${TokenLocal}&id=${id}`)
+        axios.delete(`https://todo-na-backend.herokuapp.com/api/TaskUser?token=${TokenLocal}&id=${id}`)
         .then(()=>{
             fetchTask();
         });
