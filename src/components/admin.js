@@ -1,13 +1,22 @@
 import React from 'react'
 import axios from 'axios'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faUserCircle} from '@fortawesome/free-solid-svg-icons'
-import "./style/Profile.css";
-
-const iconUser = <FontAwesomeIcon size="10x" color="gray" icon={faUserCircle} />
-
+import "../style/Todo.css";
 
 const Admin = ()=>{
+
+    React.useEffect(()=>{
+        fetchTask(); 
+    }, []);
+
+    function  fetchTask(){
+        axios
+            .get(`https://todo-na-backend.herokuapp.com/api//TaskAdmin?token=${TokenLocal}`)
+            .then((res)=>{
+                
+                console.log(res.data)
+                
+            });
+    }
     
     return <div>
        
