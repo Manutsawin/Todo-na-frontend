@@ -11,7 +11,7 @@ const Admin = ()=>{
 
     function  fetchTask(){
         axios
-            .get(`https://todo-na-backend.herokuapp.com/api//TaskAdmin?token=${TokenLocal}`)
+            .get(`https://todo-na-backend.herokuapp.com/api/TaskAdmin?token=${TokenLocal}`)
             .then((res)=>{
                 
                 console.log("5555")
