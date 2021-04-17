@@ -12,9 +12,7 @@ import Navbar from "./Nav/Navbar"
 
 const Access = ()=>{
 
-  const [Session,setSession] = useState({
-    isAdmin : false ,
-  });
+  const [isAdmin,setisAdmin]= React.useState(false);
 
   const TokenLocal = localStorage.getItem("token")
 
@@ -23,17 +21,12 @@ const Access = ()=>{
     axios
       .post(`https://todo-na-backend.herokuapp.com/api/isAdmin?token=${TokenLocal}`)
       .then((res)=>{
-         if(res.data==true)
-         {
-          setSession ({
-            isAdmin : true
-          })
+         if(res.data==true){
+             setisAdmin(true);
          }
          else{
-          localStorage.setItem("isLogined",false) 
-          setSession ({
-            isAdmin : false
-          })
+            setisAdmin(false);
+
          }
       })
     
