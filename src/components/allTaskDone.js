@@ -231,3 +231,4 @@ const AllTaskDone = ()=>{
         </div>
     </div>;
 }
+export default AllTaskDone;

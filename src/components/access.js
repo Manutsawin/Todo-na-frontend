@@ -55,6 +55,8 @@ const Access = ()=>{
                   <Route path="/todo" component={() =>  <AllTaskTodo/>}/>
                   <Route path="/done" component={() =>  <Done />}/>
                   <Route path="/Profile" component={() =>  <Profile />}/>
+                  <Route path="/contact" component={() =>  <Contact />}/>
+                  <Route  component={() =>  <Profile />}/>
                 </Switch> 
             </Router>
           </div>
