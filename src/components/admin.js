@@ -67,7 +67,7 @@ const Admin = ()=>{
         axios.put(`https://todo-na-backend.herokuapp.com/api/task?token=${TokenLocal}&id=${id}`,{
             isFinished : isFinished,
         }).then(()=>{
-            fetchTodoTask(); 
+            fetchTask();
         })
     }
 
@@ -77,14 +77,14 @@ const Admin = ()=>{
             time : Time
         }).then(()=>{
             
-            fetchTodoTask();
+            fetchTask();
         })
     }
 
     function onDelete(id){
         axios.delete(`https://todo-na-backend.herokuapp.com/api/task?token=${TokenLocal}&id=${id}`)
         .then(()=>{
-            fetchTodoTask(); 
+            fetchTask();
         });
     }
     
