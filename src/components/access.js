@@ -10,7 +10,7 @@ import Create from "./pages/Create"
 import Navbar from "./Nav/NavbarLogined"
 import NavbarAdmin from "./Nav/NavbarAdmin"
 import AllTaskTodo from "./allTaskTodo"
-
+import AllTaskDone from "./allTaskDone"
 
 
 
@@ -52,6 +52,8 @@ const Access = ()=>{
             <Router>
                 <Switch>
                   <Route exact path="/" component={() =>  <AllTaskTodo/>} />
+                  <Route path="/todo" component={() =>  <AllTaskTodo/>}/>
+                  <Route path="/done" component={() =>  <Done />}/>
                   <Route path="/Profile" component={() =>  <Profile />}/>
                 </Switch> 
             </Router>
