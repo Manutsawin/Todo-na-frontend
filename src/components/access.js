@@ -18,6 +18,8 @@ import AllUser from "./allUser"
 const Access = ()=>{
 
   const [isAdmin,setisAdmin]= useState(false);
+  const isAdminLocal = localStorage.getItem("isAdmin");
+  
 
   const TokenLocal = localStorage.getItem("token")
 
@@ -28,10 +30,12 @@ const Access = ()=>{
       .then((res)=>{
          if(res.data==true){
              setisAdmin(true);
+             localStorage.setItem("isAdmin",true) 
          }
          else{
           console.log("isUser");  
           setisAdmin(false);
+          localStorage.setItem("isAdmin",false)
 
          }
       })
@@ -46,7 +50,7 @@ const Access = ()=>{
 
     return<div>
       {
-        isAdmin ? 
+        isAdminLocal ? 
         (
           <div>
             <NavbarAdmin/>
