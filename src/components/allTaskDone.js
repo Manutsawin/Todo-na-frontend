@@ -150,7 +150,7 @@ const AllTaskDone = ()=>{
 
                                 <center>
 
-                                    <h1 className="mb-md-5" style={{fontFamily:"Nunito"}} >Admin edit Task Done</h1>
+                                    <h1 className="mb-md-5" style={{fontFamily:"Nunito"}} >Admin edit all Task Done</h1>
                                     {
                                         empty ?
                                             (
