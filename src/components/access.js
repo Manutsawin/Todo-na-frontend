@@ -1,11 +1,15 @@
 import React from 'react'
-import Login from  "./Login"
 import { BrowserRouter as Router, Route,Switch} from "react-router-dom";
 import {  useState } from 'react';
 import axios from 'axios'
 import Contact from "./pages/ContactPage"
-import SignIn from "./signIn"
 import Navbar from "./Nav/Navbar"
+import Todo from "./pages/Todo"
+import Done from "./pages/Done"
+import Profile from "./pages/Profile" 
+import Create from "./pages/Create"
+import Navbar from "./Nav/NavbarLogined" 
+
 
 
 
