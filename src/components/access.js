@@ -19,6 +19,7 @@ const Access = ()=>{
 
   const [isAdmin,setisAdmin]= useState(false);
   const isAdminLocal = localStorage.getItem("isAdmin");
+
   
 
   const TokenLocal = localStorage.getItem("token")
@@ -31,11 +32,13 @@ const Access = ()=>{
          if(res.data==true){
              setisAdmin(true);
              localStorage.setItem("isAdmin",true) 
+             isAdminLocal = localStorage.getItem("isAdmin");
          }
          else{
           console.log("isUser");  
           setisAdmin(false);
           localStorage.setItem("isAdmin",false)
+          isAdminLocal = localStorage.getItem("isAdmin");
 
          }
       })
@@ -50,7 +53,7 @@ const Access = ()=>{
 
     return<div>
       {
-        isAdmin ? 
+        isAdminLocal ? 
         (
           <div>
             <NavbarAdmin/>
