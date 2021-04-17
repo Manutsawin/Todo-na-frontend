@@ -17,10 +17,8 @@ import AllUser from "./allUser"
 
 const Access = ()=>{
 
-  const [isAdmin,setisAdmin]= useState(false);
-  const isAdminLocal = localStorage.getItem("isAdmin");
-
-  
+  const [isAdmin,setisAdmin]= useState();
+ 
 
   const TokenLocal = localStorage.getItem("token")
 
@@ -30,15 +28,14 @@ const Access = ()=>{
       .post(`https://todo-na-backend.herokuapp.com/api/isAdmin?token=${TokenLocal}`)
       .then((res)=>{
          if(res.data==true){
-             setisAdmin(true);
-             localStorage.setItem("isAdmin",true) 
-             isAdminLocal = localStorage.getItem("isAdmin");
+             
+            setisAdmin(true);
+             
          }
          else{
+         
           console.log("isUser");  
           setisAdmin(false);
-          localStorage.setItem("isAdmin",false)
-          isAdminLocal = localStorage.getItem("isAdmin");
 
          }
       })
