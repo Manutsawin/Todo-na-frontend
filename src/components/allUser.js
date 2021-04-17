@@ -153,7 +153,7 @@ const AllUser = ()=>{
                             <div>
                                 <center>
 
-                                    <h1 className="mb-md-5" style={{ fontFamily: "Nunito" }}  >Admin edit all Task Todo</h1>
+                                    <h1 className="mb-md-5" style={{ fontFamily: "Nunito" }}  >Admin edit all User</h1>
                                     {
                                         empty ?
                                             (
