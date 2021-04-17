@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route,Switch} from "react-router-dom";
 import {  useState } from 'react';
 import axios from 'axios'
 import Contact from "./pages/ContactPage"
-import Navbar from "./Nav/Navbar"
 import Todo from "./pages/Todo"
 import Done from "./pages/Done"
 import Profile from "./pages/Profile" 
