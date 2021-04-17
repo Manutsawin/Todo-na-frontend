@@ -24,7 +24,7 @@ const AllUser = ()=>{
     const [editData,setEditData] = React.useState({
         ID:"",
         Name : "" ,
-        Role : ""
+        UserID : ""
     });
     
     
@@ -108,16 +108,16 @@ const AllUser = ()=>{
                                                             setEditData({
                                                                 ID: editData.ID,
                                                                 Name: e.target.value,
-                                                                Role: editData.Role
+                                                                UserID: editData.UserID
                                                             });
                                                         }} />
                                                     </div>
                                                     <div className="row">
-                                                        <input className="form-control" value={editData.Role} type="time" onChange={(e) => {
+                                                        <input className="form-control" value={editData.UserID}  onChange={(e) => {
                                                             setEditData({
                                                                 ID: editData.ID,
                                                                 Name: editData.Name,
-                                                                Role: e.target.value
+                                                                UserID: e.target.value
                                                             });
                                                         }} />
                                                     </div>
@@ -202,7 +202,7 @@ const AllUser = ()=>{
                                                                     setEditData({
                                                                         ID: task._id,
                                                                         Name: task.Name,
-                                                                        Role: task.Role
+                                                                        UserID : task.UserID
                                                                     });
 
                                                                 }}> {iconEdit}</div>
