@@ -27,7 +27,7 @@ const Access = ()=>{
              setisAdmin(true);
          }
          else{
-          console.log("is User");  
+          console.log("isUser");  
           setisAdmin(false);
 
          }
