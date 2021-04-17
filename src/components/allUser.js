@@ -193,11 +193,8 @@ const AllUser = ()=>{
                                                     </div>
                                                     <div className="col-sm-6">
                                                         <div className="row">
-                                                            <div className="col-sm-6" >
+                                                            <div className="col-sm-8" >
 
-                                                            </div>
-                                                            <div className="col-sm-2" >
-                                                                <div align="right" className="buttonGrey" onClick={() => onUpdate(task._id, true)}> {iconCheck}</div>
                                                             </div>
                                                             <div className="col-sm-2" >
                                                                 <div align="right" className="buttonGrey" onClick={() => {
