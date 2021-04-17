@@ -8,6 +8,7 @@ import Done from "./pages/Done"
 import Profile from "./pages/Profile" 
 import Create from "./pages/Create"
 import Navbar from "./Nav/NavbarLogined"
+import NavbarAdmin from "./Nav/NavbarAdmin"
 import Admin from "./admin"
 
 
@@ -46,6 +47,7 @@ const Access = ()=>{
       {
         isAdmin ? 
         (
+          <NavbarAdmin/>
           <Admin/>
         )  
         : 
