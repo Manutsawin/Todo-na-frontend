@@ -56,7 +56,7 @@ const Access = ()=>{
             <NavbarAdmin/>
             <Router>
                 <Switch>
-                  <Route exact path="/" component={() =>  <AllTaskTodo/>} />
+                  <Route exact path="/" component={() =>  <Profile />} />
                   <Route path="/todo" component={() =>  <AllTaskTodo/>}/>
                   <Route path="/done" component={() =>  <AllTaskDone />}/>
                   <Route path="/Profile" component={() =>  <Profile />}/>
