@@ -12,9 +12,9 @@ const iconSave = <FontAwesomeIcon size="3x" color="green" icon={faCheckSquare} /
 const iconCancel = <FontAwesomeIcon size="3x" color="red" icon={faTimes} />
 const iconTask = <FontAwesomeIcon size="7x" color="grey" icon={faFile} />
 
-const AllTaskTodo = ()=>{
+const AllUser = ()=>{
 
-    const [todo,setTodo] = React.useState([]);
+    const [allUser,setAllUser] = React.useState([]);
     const TokenLocal = localStorage.getItem("token")
     
     const [empty,setEmpty]= React.useState(false);
@@ -24,7 +24,7 @@ const AllTaskTodo = ()=>{
     const [editData,setEditData] = React.useState({
         ID:"",
         Name : "" ,
-        Time : ""
+        Role : ""
     });
     
     
@@ -39,14 +39,15 @@ const AllTaskTodo = ()=>{
     
     function  getTaskFalse(){
         axios
-            .get(`https://todo-na-backend.herokuapp.com/api/TaskAdmin?token=${TokenLocal}&isFinished=false`)
+            .get(`https://todo-na-backend.herokuapp.com/api//TaskUser?token=${TokenLocal}`)
             .then((res)=>{
                 
                 if(res.data=="")
                 {
                     setEmpty(true)
                 }
-                setTodo(res.data)
+                console.log(res.data)
+                setAllUser(res.data)
                 
                 
             });
@@ -107,16 +108,16 @@ const AllTaskTodo = ()=>{
                                                             setEditData({
                                                                 ID: editData.ID,
                                                                 Name: e.target.value,
-                                                                Time: editData.Time
+                                                                Role: editData.Role
                                                             });
                                                         }} />
                                                     </div>
                                                     <div className="row">
-                                                        <input className="form-control" value={editData.Time} type="time" onChange={(e) => {
+                                                        <input className="form-control" value={editData.Role} type="time" onChange={(e) => {
                                                             setEditData({
                                                                 ID: editData.ID,
                                                                 Name: editData.Name,
-                                                                Time: e.target.value
+                                                                Role: e.target.value
                                                             });
                                                         }} />
                                                     </div>
@@ -128,7 +129,7 @@ const AllTaskTodo = ()=>{
                                                         </div>
                                                         <div className="col-sm-2 mr-md-2 ml-md-2" >
                                                             <div align="right" className="buttonGrey" onClick={() => {
-                                                                onUpdateData(editData.ID, editData.Name, editData.Time)
+                                                                onUpdateData(editData.ID, editData.Name, editData.Role)
                                                                 setEdit(false)
                                                             }}>{iconSave}</div>
                                                         </div>
@@ -174,20 +175,20 @@ const AllTaskTodo = ()=>{
 
                                 </center>
 
-                                {todo.map((task) => (
+                                {allUser.map((task) => (
                                     <center>
                                         <div className="col-md-6">
                                             <div className="Card mb-sm-2" >
                                                 <div className="row">
                                                     <div className="col-md-6">
                                                         <div className="row">
+                                                            <span style={{ fontFamily: "Prompt" }} >{task.Name} </span>
+                                                        </div>
+                                                        <div className="row">
                                                             <span style={{ fontFamily: "Prompt" }} >{task.UserID} </span>
                                                         </div>
                                                         <div className="row">
-                                                            <span style={{ fontFamily: "Prompt" }} >{task.taskName} </span>
-                                                        </div>
-                                                        <div className="row">
-                                                            <span style={{ fontFamily: "Prompt" }} >{task.time} </span>
+                                                            <span style={{ fontFamily: "Prompt" }} >{task.Role} </span>
                                                         </div>
                                                     </div>
                                                     <div className="col-sm-6">
@@ -203,8 +204,8 @@ const AllTaskTodo = ()=>{
                                                                     setEdit(true);
                                                                     setEditData({
                                                                         ID: task._id,
-                                                                        Name: task.taskName,
-                                                                        Time: task.time
+                                                                        Name: task.Name,
+                                                                        Role: task.Role
                                                                     });
 
                                                                 }}> {iconEdit}</div>
@@ -234,4 +235,4 @@ const AllTaskTodo = ()=>{
     </div>;
     
 }
-export default AllTaskTodo;
+export default AllUser;

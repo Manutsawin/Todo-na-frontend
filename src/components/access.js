@@ -11,6 +11,7 @@ import Navbar from "./Nav/NavbarLogined"
 import NavbarAdmin from "./Nav/NavbarAdmin"
 import AllTaskTodo from "./allTaskTodo"
 import AllTaskDone from "./allTaskDone"
+import AllUser from "./allUser"
 
 
 
@@ -56,6 +57,7 @@ const Access = ()=>{
                   <Route path="/done" component={() =>  <AllTaskDone />}/>
                   <Route path="/Profile" component={() =>  <Profile />}/>
                   <Route path="/contact" component={() =>  <Contact />}/>
+                  <Route path="/AllUser" component={() =>  <AllUser />}/>
                   <Route  component={() =>  <Profile />}/>
                 </Switch> 
             </Router>
