@@ -104,7 +104,7 @@ const AllUser = ()=>{
                                             <div className="row">
                                                 <div className="col-md-6">
                                                     <div className="row">
-                                                        <input type="User" className="form-control" placeholder="Enter User" value={editData.Name} onChange={(e) => {
+                                                        <input  className="form-control" placeholder="Enter Name" value={editData.Name} onChange={(e) => {
                                                             setEditData({
                                                                 ID: editData.ID,
                                                                 Name: e.target.value,
@@ -113,7 +113,7 @@ const AllUser = ()=>{
                                                         }} />
                                                     </div>
                                                     <div className="row">
-                                                        <input className="form-control" value={editData.UserID}  onChange={(e) => {
+                                                        <input className="form-control" placeholder="Enter UserID" value={editData.UserID}  onChange={(e) => {
                                                             setEditData({
                                                                 ID: editData.ID,
                                                                 Name: editData.Name,
