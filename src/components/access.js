@@ -47,8 +47,10 @@ const Access = ()=>{
       {
         isAdmin ? 
         (
-          <NavbarAdmin/>
-          <Admin/>
+          <div>
+            <NavbarAdmin/>
+            <Admin/>
+          </div>
         )  
         : 
         (
