@@ -20,11 +20,11 @@ const NavbarAdmin = ()=>{
         <div>
         <Navbar bg="light" variant="light" expand="lg">
                 <img href="/" src="logo/512.png" height="45" width="45"  className="mr-sm-2"></img>
-                <Navbar.Brand href="/todo" style={{fontFamily:"Nunito"}} className="mr-sm-3"  >Todo na  [Admin] </Navbar.Brand>
+                <Navbar.Brand href="/" style={{fontFamily:"Nunito"}} className="mr-sm-3"  >Todo na  [Admin] </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                        <Nav.Link href="/" className="mr-sm-2">all Task Todo</Nav.Link>
+                        <Nav.Link href="/todo" className="mr-sm-2">all Task Todo</Nav.Link>
                         <Nav.Link href="/done" className="mr-sm-2">all Task Done</Nav.Link>
                         <Nav.Link href="/AllUser" className="mr-sm-2">all User</Nav.Link>
                         <NavDropdown title="More" id="basic-nav-dropdown" className="mr-sm-2">
