@@ -182,13 +182,13 @@ const AllUser = ()=>{
                                                 <div className="row">
                                                     <div className="col-md-6">
                                                         <div className="row">
-                                                            <span style={{ fontFamily: "Prompt" }} >{task.Name} </span>
+                                                            <span style={{ fontFamily: "Prompt" }} >Name : {task.Name} </span>
                                                         </div>
                                                         <div className="row">
-                                                            <span style={{ fontFamily: "Prompt" }} >{task.UserID} </span>
+                                                            <span style={{ fontFamily: "Prompt" }} >UserID : {task.UserID} </span>
                                                         </div>
                                                         <div className="row">
-                                                            <span style={{ fontFamily: "Prompt" }} >{task.Role} </span>
+                                                            <span style={{ fontFamily: "Prompt" }} >Role : {task.Role} </span>
                                                         </div>
                                                     </div>
                                                     <div className="col-sm-6">
