@@ -7,7 +7,8 @@ import Todo from "./pages/Todo"
 import Done from "./pages/Done"
 import Profile from "./pages/Profile" 
 import Create from "./pages/Create"
-import Navbar from "./Nav/NavbarLogined" 
+import Navbar from "./Nav/NavbarLogined"
+import Admin from "./admin"
 
 
 
@@ -45,7 +46,7 @@ const Access = ()=>{
       {
         isAdmin ? 
         (
-          <Contact/>
+          <Admin/>
         )  
         : 
         (
