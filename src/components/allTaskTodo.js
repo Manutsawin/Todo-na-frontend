@@ -2,7 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import "./style/Todo.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCheckCircle,faTrash,faPencilAlt,faCheckSquare,faTimes,faFile} from '@fortawesome/free-solid-svg-icons'
+import { faTimesCircle,faCheckCircle,faTrash,faPencilAlt,faCheckSquare,faTimes,faFile} from '@fortawesome/free-solid-svg-icons'
 
 
 const iconCheck = <FontAwesomeIcon size="2x" color="green" icon={faCheckCircle} />
@@ -12,7 +12,7 @@ const iconSave = <FontAwesomeIcon size="3x" color="green" icon={faCheckSquare} /
 const iconCancel = <FontAwesomeIcon size="3x" color="red" icon={faTimes} />
 const iconTask = <FontAwesomeIcon size="7x" color="grey" icon={faFile} />
 
-const Admin = ()=>{
+const AllTaskTodo = ()=>{
 
     const [todo,setTodo] = React.useState([]);
     const TokenLocal = localStorage.getItem("token")
@@ -233,9 +233,12 @@ const Admin = ()=>{
                 }
             </ul>
         </div>
+
+
+        
       
        
     </div>;
     
 }
-export default Admin;
+export default AllTaskTodo;

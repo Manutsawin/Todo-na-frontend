@@ -9,7 +9,7 @@ import Profile from "./pages/Profile"
 import Create from "./pages/Create"
 import Navbar from "./Nav/NavbarLogined"
 import NavbarAdmin from "./Nav/NavbarAdmin"
-import Admin from "./admin"
+import AllTaskTodo from "./allTaskTodo"
 
 
 
@@ -49,7 +49,11 @@ const Access = ()=>{
         (
           <div>
             <NavbarAdmin/>
-            <Admin/>
+            <Router>
+                <Switch>
+                  <Route exact path="/" component={() =>  <AllTaskTodo/>} />
+                </Switch> 
+            </Router>
           </div>
         )  
         : 
