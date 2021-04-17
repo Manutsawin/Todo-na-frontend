@@ -33,7 +33,7 @@ const NavbarAdmin = ()=>{
                             <NavDropdown.Item href="/contact">Contact</NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
-                    <h4><Badge className="mr-md-2 mt-md-2" pill variant="dark">{name}</Badge></h4>
+                    <h4><Badge className="mr-md-2 mt-md-2" pill variant="dark">Admin : {name}</Badge></h4>
                     <Form inline >
                         <Button href="/" variant="outline-info" className="mr-sm-2" style={{fontFamily:"Nunito"}} onClick={()=>localStorage.clear()} >Logout</Button> 
                     </Form>
