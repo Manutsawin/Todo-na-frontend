@@ -24,8 +24,8 @@ const NavbarAdmin = ()=>{
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                        <Nav.Link href="/todo" className="mr-sm-2">Todo</Nav.Link>
-                        <Nav.Link href="/done" className="mr-sm-2">Done</Nav.Link>
+                        <Nav.Link href="/todo" className="mr-sm-2">all Task Todo</Nav.Link>
+                        <Nav.Link href="/done" className="mr-sm-2">all Task Done</Nav.Link>
                         <NavDropdown title="More" id="basic-nav-dropdown" className="mr-sm-2">
                             <NavDropdown.Item href="/profile">Profile</NavDropdown.Item>
                             <NavDropdown.Divider />
