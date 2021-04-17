@@ -53,19 +53,10 @@ const AllUser = ()=>{
             });
     }
 
-
-    function  onUpdate(id,isFinished){
-        axios.put(`https://todo-na-backend.herokuapp.com/api/task?token=${TokenLocal}&id=${id}`,{
-            isFinished : isFinished,
-        }).then(()=>{
-            fetchTask();
-        })
-    }
-
-    function  onUpdateData(id,Name,Time){
-        axios.put(`https://todo-na-backend.herokuapp.com/api/task?token=${TokenLocal}&id=${id}`,{
-            taskName : Name,
-            time : Time
+    function  onUpdateData(id,name,user){
+        axios.put(`https://todo-na-backend.herokuapp.com/api/TaskUser?token=${TokenLocal}&id=${id}`,{
+            Name : name,
+            UserID : user
         }).then(()=>{
             
             fetchTask();
@@ -129,7 +120,7 @@ const AllUser = ()=>{
                                                         </div>
                                                         <div className="col-sm-2 mr-md-2 ml-md-2" >
                                                             <div align="right" className="buttonGrey" onClick={() => {
-                                                                onUpdateData(editData.ID, editData.Name, editData.Role)
+                                                                onUpdateData(editData.ID, editData.Name, editData.UserID)
                                                                 setEdit(false)
                                                             }}>{iconSave}</div>
                                                         </div>
